@@ -3,6 +3,8 @@
  *  Copyright 2021 Arya Hirode
  */
 package org.example.ex25.base;
+
+import java.util.Scanner;
 /*
 Functions help you abstract away complex operations, but they also help you build reusable components.
 
@@ -21,8 +23,27 @@ Constraints
    -Use a single output statement.
  */
 public class App {
+    private static final Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
+        String password = readPassword();
+        PasswordStrength pw = new PasswordStrength();
+        int passwordScore = pw.passwordValidator(password);
+        System.out.printf(genOutput(passwordScore), password);
+    }
 
+    private static String genOutput(int passwordScore) {
+        return switch (passwordScore) {
+            case 1 -> "The password '%s' is a very weak password.";
+            case 2 -> "The password '%s' is a weak password.";
+            case 3 -> "The password '%s' is a strong password.";
+            case 4 -> "The password '%s' is a very strong password.";
+            default -> "This should never happen.";
+        };
+    }
+
+    private static String readPassword() {
+        System.out.print("Enter a password: ");
+        return in.next();
     }
 
 }
