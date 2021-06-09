@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PaymentCalculatorTest {
 
     @Test
-    void calculateMonthsUntilPaidOff_returns_correct_value_according_to_formula_trial1() {
+    void calculateMonthsUntilPaidOff_returns_correct_value_according_to_formula() {
         PaymentCalculator pc = new PaymentCalculator();
         double expected = 70;
         double actual = pc.calculateMonthsUntilPaidOff(5000, 12, 100);
