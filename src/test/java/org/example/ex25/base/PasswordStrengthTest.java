@@ -34,7 +34,7 @@ class PasswordStrengthTest {
     void passwordValidator_returns_4_for_very_strong_passwords() {
         PasswordStrength pw = new PasswordStrength();
         int expected = 4;
-        int actual = pw.passwordValidator("abcdefg1@");
+        int actual = pw.passwordValidator("1337h@xor!");
         assertEquals(expected, actual);
     }
 }
