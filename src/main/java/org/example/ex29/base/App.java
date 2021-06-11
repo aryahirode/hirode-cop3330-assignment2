@@ -9,11 +9,8 @@ import java.util.Scanner;
 public class App {
     private static final Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
-        //input loop
         double rate = inputLoop();
-        //quickCalculator
         InvestmentCalculator ic = new InvestmentCalculator();
-        //print result
         System.out.printf("It will take %.0f years to double your initial investment.\n", ic.quickCalculator(rate));
     }
 
