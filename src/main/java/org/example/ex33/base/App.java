@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Arya Hirode
+ */
 package org.example.ex33.base;
 
 import java.util.Scanner;
